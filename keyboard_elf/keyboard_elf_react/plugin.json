@@ -1,0 +1,11 @@
+{
+	"main": "./build/index.html",
+	"logo": "./build/logo192.png",
+	"features": [
+		{
+		  "code": "tom",
+		  "explain": "tom and jerry",
+		  	"cmds":["tom","汤姆"]
+		}
+	]
+}
