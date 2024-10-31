@@ -15,7 +15,9 @@ func main() {
 	//demo6()
 	//demo7()
 	//demo8()
-	demo9()
+	//demo9()
+	//demo10()
+	demo11()
 }
 
 // 实现 1到10的数字之和
@@ -226,4 +228,44 @@ forCode:
 		println("for循环")
 	}
 	println("循环执行完毕")
+}
+
+// continue label
+func demo10() {
+	// 不使用label
+	for i := 1; i <= 3; i++ {
+		println("不使用label 的continue", i)
+		for j := 11; j <= 13; j++ {
+			if j == 12 {
+				continue
+			}
+			println("不使用label 的continue", j)
+		}
+	}
+
+	// 使用label
+outerFor:
+	for i := 1; i <= 3; i++ {
+		println("使用label 的continue", i)
+		for j := 11; j <= 13; j++ {
+			if j == 12 {
+				continue outerFor
+			}
+			println("使用label 的continue", j)
+		}
+	}
+}
+
+// goto demo 使用goto来实现一个continue的功能
+func demo11() {
+	a := 10
+loop:
+	for a <= 20 {
+		if a == 15 {
+			a++
+			goto loop
+		}
+		println(a)
+		a++
+	}
 }
