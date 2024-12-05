@@ -1,9 +1,9 @@
 package main
 
 import (
-	"./lib1"
-	"./lib2"
 	"fmt"
+	"goinit/lib1"
+	"goinit/lib2"
 )
 
 func init() {
